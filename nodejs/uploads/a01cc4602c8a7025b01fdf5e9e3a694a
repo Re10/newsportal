@@ -1,0 +1,38 @@
+<html>
+<title>AngularJS Simple CRUD</title>
+
+<head>
+    <script src="angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+
+<body ng-controller="addStudentController">
+
+    <div class="container" style="margin-top:20px;">
+        <form>
+                               
+                    <label>First Name:</label>
+                    <input type="text" name="firstName" ng-model="newStudent.firstName"><br><br>
+
+                    <label>Last name:</label>
+                    <input type="text" name="lastName" ng-model="newStudent.lastName"><br><br>
+
+                    <label>Email:</label>
+                    <input type="text" name="email" ng-model="newStudent.email"><br><br>
+
+                    <label>Phone:</label>
+                    <input type="text" name="phone" ng-model="newStudent.phone"><br><br>
+
+                    <input type="hidden" name="id" ng-model="newStudent.id">
+                    <input type="button" class="btn btn-primary" value="Save Student" ng-click="saveStudent()">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

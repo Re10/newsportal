@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Students Page</title>
+    <script src="angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body ng-controller="shownewsContoller">
+    <div class="container text-center" style="margin-top:50px;">
+        <h1>{{message}}</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr.No.</th>
+                    <th>Headline</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="newes in news">
+                    <td>{{$index + 1}}</td>
+                    <td>{{newes.headline}}</td>
+                    <td>{{newes.date}}</td>
+                    <td>{{newes.discription}}</td>
+                    <!-- <td>{{url+news.myImg}}</td> -->
+                    <td> <img class="img" src="{{url+news.myImg}}"></td>
+                    <td>
+                        <!-- <a href="#" class="btn btn-success" ng-click="editStudent(stud._id)">Edit</a> -->
+                        <a ui-sref="edit({id:news._id})" ui-sref-active="active" class="btn btn-success">Edit</a>
+                        <!-- <a href="#" class="btn btn-danger" ng-click="deleteStudent(stud._id)">Delete</a> -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+<title>AngularJS Simple CRUD</title>
+
+<head>
+    <script src="angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+
+<body ng-controller="editnewsContoller">
+
+    <div class="container" style="margin-top:20px;">
+        <form>
+                               
+                    <label>First Name:</label>
+                    <input type="text" name="headline" ng-model="news.headline"><br><br>
+
+                    <label>Last name:</label>
+                    <input type="text" name="date" ng-model="news.date"><br><br>
+
+                    <label>Email:</label>
+                    <input type="text" name="discription" ng-model="news.discription"><br><br>
+
+                    <label>Phone:</label>
+                    <img class="img" src="{{url+news.myImg}}"><sbr><br>
+
+                    <input type="hidden" name="id" ng-model="news.id">
+                    <input type="button" class="btn btn-primary" value="Edit News" ng-click="edit(news._id)">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <title>Post-News</title>
+</head>
+
+<body ng-controller="postnewsContoller">
+    
+
+        <div class="container" style="margin-top:20px; text-align: center">
+            <form>
+                                   
+                        <label>News HeadLine:</label>
+                        <input type="text" name="headline" ng-model="newNews.headline"><br><br>
+<!--     
+                        <label>News Date:</label>
+                       <input type="date" ng-model="newNews.date"><br><br>  -->
+
+                        <label>News Discription:</label>
+                        <textarea name="discription" ng-model="newNews.discription"></textarea><br><br>
+    
+                        <label>Browse Image:</label>
+                        <input type="file" id="myImg" name="file" ng-model="newNews.file" onchange="uploadImg(event)"><br><br>
+    
+                        <input type="button" class="btn btn-primary" value="Save Post-News" ng-click="saveNews()">
+
+                     
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+    
+</html>
